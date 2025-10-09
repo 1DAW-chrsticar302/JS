@@ -65,4 +65,13 @@
     let regEx5 = /^.$/i;
     let regEx6 = /^\.&/i;
     console.log(regEx6.test("X"));
+
+    let str = "la ola de la playa tiene más sal que de costumbre";
+    let regEx8 = /\b[a-z]{3}\b/i;
+    console.log(regEx8.test(str)); //coge la primera palabra
+
+    console.log(regEx8.exec(str));
+    
+    //otra forma de hacerlo:
+    console.log(str.match(regEx8));
 }
