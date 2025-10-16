@@ -31,12 +31,36 @@
             if(array[i]>maxNumber) maxNumber=array[i];
             if(array[i]<minNumber) minNumber=array[i];
             suma+=array[i];
-
         }
 
         let media=parseFloat(suma/array.length);
         array.sort( (a,b)=> a-b); //Menor a mayor
+        minNumber=array[0];
+        let array1 = [...array.sort( (a,b)=> a-b)];
         array.sort( (a,b)=> b-a); //Mayor a menor
+        maxNumber=array[0];
+        let array2 = [...array.sort( (a,b)=> b-a)];
+
+
+
+        let myarray = [
+            ['Número de pares:',paresNum],
+            ['Número de impares:',imparesNum],
+            ['Números pares:',pares],
+            ['Números impares:',impares],
+            ['Suma de los negativos:',sumaNeg],
+            ['Suma:',suma],
+            ['Multiplicación de positivos:',productoPos],
+            ['Números primos:',primos],
+            ['Número más grande:',maxNumber],
+            ['Número más pequeño:',minNumber],
+            ['Media de todos los números:',media],
+            ['De menor a mayor:',array1],
+            ['Demayor a menor:',array2],
+        ];
+
+        return myarray;
+
     }
 
     function isPrimo(num){
@@ -47,4 +71,18 @@
         }
         return true;
     }
+
+    let array = new Array();
+    array.push(1);
+    array.push(2);
+    array.push(3);
+    array.push(5);
+    array.push(7);
+    array.push(9);
+    array.push(13);
+    array.push(17);
+    array.push(23);
+    array.push(4);
+
+    console.table(analise(array));
 }
