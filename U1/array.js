@@ -95,10 +95,35 @@
     myNumbers.sort( (a,b)=> a-b);
 
 
-    //
+    //SLICE
+    let nombres = ["Manuel", "Chris", "jose", "Victor", "Angel"];
+
+    let nombresSubArray = nombres.slice(1,3); // del primero al tercero
+    let nombresInv = nombres.slice(-2); //los dos últimos
+
+    //filter
+    let users = [
+        {name: "John", age: 20},
+        {name: "Amy", age: 30},
+        {name: "Thomas", age: 10}
+    ];
+
+    let filterUsers = users.filter(function (user) {
+        return user.age > 15;
+    })
+
+    //find: pirmer eleento que encuentra
+
+    users.find(function (user){
+        return user.name.match(/A[a-z][a-z]/);
+    })
 
 
+    //some: comprueba si al menos un elemento cumple la condición
 
+    //findIndex = devueve el indice del primer elemento que cumpla la condición
 
+    //concat = concatena arrays
 
+    
 }
