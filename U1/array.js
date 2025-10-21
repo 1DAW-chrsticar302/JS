@@ -125,5 +125,95 @@
 
     //concat = concatena arrays
 
+    //reduce (acumulador, valorActual)
+    let numbers = [1,2,3,4,5];
+    let sumaTotal = numbers.reduce(function (acumulador, valorActual) {
+        acumulador +=valorActual;
+        return acumulador;
+    },0);
+
+    let sumaTotal2 = numbers.reduce((acumulador, valorActual) => {
+        acumulador +=valorActual;
+        return acumulador;
+    },0);
+
+    const miArrayNumeros = [[0,1],[2,3],[4,5]];
+    let ArrayCompleto = miArrayNumeros.reduce((acc,valorA) => {acc.concat(valorA);},[]); //[1,2,3,4,5]
     
+
+
+    //includes ()
+    let motos = ["yamaha","ducati", "kawasaki"];
+    console.log(motos.includes("vespa")); //Al ser falso, no dice nada
+    console.log(motos.includes("ducati")); //Aquí si
+
+
+    // ITERAR SOBRE UN ARRAY
+    // for, foreach, map, for of
+
+    //for
+    let vector = [1,2,"A","F",-1,2.4];
+
+    for (let i=0; i<vector.length; i++) {
+        console.log(vector[i]);
+    }
+
+
+    //foreach -- no devuelve nada
+    vector.forEach(function(elem){
+        console.log(elem);
+    });
+
+    vector.forEach( function(elem, index) {
+        console.log("En  la posición "+index+" Nos encontramos el elemento: "+elem);
+    });
+
+    vector.forEach( (elem, index) => {
+        console.log("En  la posición "+index+" Nos encontramos el elemento: "+elem);
+    });
+
+
+    //Map -- Devuelve cada elemento
+    let vector2 = vector.map( function(elem) {
+        console.log(elem);
+        return elem;
+    }); //
+
+    let vectorX2 = vector.map( x => x*2);
+
+    // let users2 = [
+    //     { name: "John", age: 34},
+    //     { name: "John", age: 34},
+    //     { name: "John", age: 34},
+    //     { name: "John", age: 34}
+    // ]
+
+    let arrayAges = users.map(user => user.age);
+    let sumaEdades = arrayAges.reduce( (acumulador, valorActual) =>  acumulador+=valorActual);
+    console.log(arrayAges);
+    console.log(sumaEdades);
+
+
+    let fullUsers = users.map(user => {
+        return {
+            ...user,
+            city: "Guadalajara"
+        };
+    });
+
+    let fullUsers2 = users.map(user => {
+        return {
+            ...user,
+            age: user.age*2
+        };
+    });
+
+
+    //for of
+    for(let user of users) {
+        console.log(user);
+    }
+
+
+
 }
