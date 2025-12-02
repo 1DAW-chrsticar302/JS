@@ -19,7 +19,7 @@
     buttonShow.onclick = function () {
         let container = document.querySelector('.content');
         if(container){
-
+            document.body.removeChild(container);
         }else{
             let contenedor = document.createElement('div');
             contenedor.classList.add('content');
@@ -57,6 +57,7 @@
                 element.classList.add('grande');
             }
             element.checked = true;
+            console.log('Checkbox' + element.getAttribute('value') + ' marcado');
         });
     }
 
@@ -64,13 +65,14 @@
         let array = document.querySelectorAll('input');
         array.forEach(element => {
             element.checked = false;
+            console.log('Checkbox' + element.getAttribute('value') + ' no marcado');
         });
     }
 
     buttonReset.onclick = function () {
-        let array = document.querySelectorAll('input');
+        let array = document.querySelectorAll('.grande');
         array.forEach(element => {
-            element.classList.remove;
+            element.classList.remove('grande');
         });
     }
 }
