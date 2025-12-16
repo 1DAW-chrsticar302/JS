@@ -12,7 +12,9 @@
         
         if (!regex.test(email.value)) {
             mensaje.textContent = 'Formato de email incorrecto';
-            alert('hola');
+            setTimeout(()=>{
+                mensaje.textContent = '';
+            },2000);
             return;
         }
         const servidor = email.value.split('@')[1];
@@ -20,6 +22,9 @@
             mensaje.textContent = 'Email válido';
         } else {
             mensaje.textContent = 'Servidor no admitido';
+            setTimeout(()=>{
+                mensaje.textContent = '';
+            },2000);
         }
     })
 }

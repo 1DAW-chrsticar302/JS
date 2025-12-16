@@ -4,7 +4,7 @@
     let opcion1 = document.getElementById('opcion1');
     let opcion2 = document.getElementById('opcion2');
 
-    opcion1.addEventListener('blur', function(event) {
+    opcion1.addEventListener('change', function(event) {
         switch(opcion1.value) {
             case 'Alicante': {
                 opcion2.innerHTML = '<option value="Alicante Capital">Alicante Capital</option>'+
