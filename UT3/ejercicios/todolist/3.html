@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TODO list</title>
+
+    <style>
+        .form{
+            padding: 3%;
+            width: fit-content;
+            border: black 2px dashed;
+            margin-bottom: 5%;
+        }
+
+        .list{
+            padding: 1%;
+            width: fit-content;
+            border: black 2px solid;
+        }
+
+        .tasks {
+            font-style: italic;
+            font-weight: bold;
+            font-size: 20px;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="form">
+    <form id="taskForm">
+        <label>Task name</label><br>
+        <input type="text" id="name" required><br><br>
+
+        <label>Task description</label><br>
+        <input type="text" id="description" required><br><br>
+
+        <label>Task priority</label><br>
+        <input type="radio" name="priority" value="1" required> 1  
+        <input type="radio" name="priority" value="2"> 2  
+        <input type="radio" name="priority" value="3"> 3  
+
+        <br><br>
+        <button type="submit">Añadir tarea</button>
+    </form>
+</div>
+
+<div class="list">
+    <h2>Lista de tareas almacenadas (orden por prioridad)</h2>
+    <button id="ver">Ver tareas</button>
+    <div class="tasks" id="tasks"></div>
+</div>
+
+<script src="3.js"></script>
+
+</body>
+</html>
