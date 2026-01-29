@@ -1,0 +1,56 @@
+{
+  "usuarios": [
+    {
+      "id": "1",
+      "usuario": "Juanpe",
+      "email": "juan.pedro.bernal@iesmartinezm.es",
+      "foto": "https://avatars.githubusercontent.com/u/144746228?v=4"
+    },
+    {
+      "id": "2",
+      "usuario": "Eliseo",
+      "email": "eliseo.molero@iesmartinezm.es",
+      "foto": "https://www.jmegea.com/menu/tiradores/fichae10.jpg"
+    },
+    {
+      "id": "3",
+      "usuario": "Daniel",
+      "email": "daniel.vidal@iesmartinezm.es",
+      "foto": "https://media.licdn.com/dms/image/v2/C4E03AQEomJdAhr4k-g/profile-displayphoto-shrink_200_200/profile-displayphoto-shrink_200_200/0/1516776296738?e=2147483647&v=beta&t=K7SjRwZbLeoagN_nWlLhJq7QI8914mBfGRecVhteNm8"
+    }
+  ],
+  "heroes": [
+    {
+      "id": "batman",
+      "superhero": "Batman",
+      "publisher": "DC Comics",
+      "alter_ego": "Bruce Wayne",
+      "first_appearance": "Detective Comics #27",
+      "date": "30/03/1939"
+    },
+    {
+      "id": "superman",
+      "superhero": "Superman",
+      "publisher": "DC Comics",
+      "alter_ego": "Klark Ken",
+      "first_appearance": "Action Comics #1",
+      "date": "18/04/1938"
+    },
+	{
+      "id": "spider-man",
+      "superhero": "Spider-Man",
+      "publisher": "Marvel Comics",
+      "alter_ego": "Peter Parker",
+      "first_appearance": "Amazing Fantasy #15",
+      "date": "08/08/1962"
+    },
+	{
+      "id": "hulk",
+      "superhero": "Hulk",
+      "publisher": "Marvel º",
+      "alter_ego": "Bruce Banner",
+      "first_appearance": "Marvel Cinematic Universe",
+      "date": "30/05/1962"
+    }
+  ]
+}
